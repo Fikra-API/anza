@@ -21,6 +21,12 @@ Then open http://localhost:8000, sign up, and chat.
 - **Frontend**: one HTML page, Tailwind via CDN, vanilla JS. No build step.
 - **Nothing else**: that is the point.
 
+## Free AI credits included
+
+Anza ships pointed at Fikra, an OpenAI-compatible inference API. Your kit includes $1 in free credits, and credits let you choose whichever model you want instead of locking you into one model's free tier.
+
+When your app outgrows experiments, the same account scales without changing a line of code: self-serve from $1, Growth at $50/mo with a 99.9% SLA and reserved throughput, and Scale at $138/mo for business-critical workloads. Start on the free credits, keep the exact same integration as you grow.
+
 ## What we left out
 
 - No React, no TypeScript, no node_modules
