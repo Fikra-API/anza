@@ -1,0 +1,21 @@
+{
+  "name": "Anza",
+  "short_name": "Anza",
+  "description": "Ship an AI SaaS in a day",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#4f46e5",
+  "icons": [
+    {
+      "src": "/icons/anza.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/anza.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

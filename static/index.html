@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anza - Ship an AI SaaS in a day</title>
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#4f46e5">
+    <link rel="icon" href="/icons/anza.png" type="image/png">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-50 text-slate-900 min-h-screen flex flex-col font-sans">
+    <!-- Header -->
+    <header class="bg-white border-b border-slate-200 px-6 py-4 flex items-center justify-between">
+        <div class="flex items-center space-x-2">
+            <span class="w-8 h-8 rounded-lg bg-indigo-600 flex items-center justify-center text-white font-bold text-lg">A</span>
+            <span class="text-xl font-bold tracking-tight text-slate-800">Anza</span>
+        </div>
+        <div id="user-nav" class="hidden items-center space-x-4">
+            <span id="user-email" class="text-sm font-medium text-slate-600"></span>
+            <button id="logout-btn" class="text-sm px-3 py-1.5 rounded-md border border-slate-300 text-slate-700 hover:bg-slate-100">Log out</button>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <main class="flex-1 flex items-center justify-center p-4">
+        <!-- Auth Section -->
+        <div id="auth-container" class="w-full max-w-md bg-white border border-slate-200 rounded-2xl shadow-sm p-8">
+            <div class="text-center mb-6">
+                <h1 id="auth-title" class="text-2xl font-bold text-slate-900">Welcome to Anza</h1>
+                <p id="auth-subtitle" class="text-sm text-slate-500 mt-1">Sign in to start chatting with AI</p>
+            </div>
+
+            <div id="auth-error" class="hidden mb-4 p-3 bg-red-50 border border-red-200 text-red-700 text-sm rounded-lg"></div>
+
+            <form id="auth-form" class="space-y-4">
+                <div>
+                    <label for="email" class="block text-sm font-medium text-slate-700 mb-1">Email</label>
+                    <input id="email" type="email" required placeholder="you@example.com" class="w-full px-3 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 text-sm">
+                </div>
+                <div>
+                    <label for="password" class="block text-sm font-medium text-slate-700 mb-1">Password</label>
+                    <input id="password" type="password" required placeholder="••••••••" class="w-full px-3 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 text-sm">
+                </div>
+                <button id="auth-submit" type="submit" class="w-full py-2.5 px-4 bg-indigo-600 hover:bg-indigo-700 text-white font-medium rounded-lg text-sm shadow-sm transition">
+                    Sign in
+                </button>
+            </form>
+
+            <div class="mt-6 text-center text-sm text-slate-500">
+                <span id="auth-toggle-text">Don't have an account?</span>
+                <button id="auth-toggle-btn" class="ml-1 text-indigo-600 font-semibold hover:underline">Sign up</button>
+            </div>
+        </div>
+
+        <!-- Chat Section -->
+        <div id="chat-container" class="hidden w-full max-w-3xl h-[80vh] flex flex-col bg-white border border-slate-200 rounded-2xl shadow-sm overflow-hidden">
+            <div id="chat-messages" class="flex-1 overflow-y-auto p-6 space-y-4">
+                <div class="bg-indigo-50 border border-indigo-100 rounded-xl p-4 text-sm text-indigo-900 max-w-lg">
+                    👋 <strong>Hello!</strong> I am your Anza AI assistant. Ask me anything!
+                </div>
+            </div>
+
+            <div id="chat-error" class="hidden px-6 py-2 bg-red-50 border-t border-red-200 text-red-700 text-xs"></div>
+
+            <form id="chat-form" class="border-t border-slate-200 p-4 bg-slate-50 flex items-center space-x-2">
+                <input id="chat-input" type="text" placeholder="Type your message..." required autocomplete="off" class="flex-1 px-4 py-2.5 bg-white border border-slate-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 text-sm">
+                <button id="chat-send" type="submit" class="px-5 py-2.5 bg-indigo-600 hover:bg-indigo-700 text-white font-medium rounded-xl text-sm shadow-sm transition flex items-center space-x-1">
+                    <span>Send</span>
+                </button>
+            </form>
+        </div>
+    </main>
+
+    <script src="/app.js"></script>
+</body>
+</html>
